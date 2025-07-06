@@ -2,3 +2,12 @@
     display: flex;
     flex-direction: column;
 }
+.todo > * {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.todo > *:hover {
+    background-color: antiquewhite;
+}
