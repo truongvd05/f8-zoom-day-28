@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const todo = $(".todo");
+const todo = $(".product-list");
 
 // XHR
 // function send(method = "GET", url, cb) {
@@ -41,11 +41,9 @@ send("GET", "https://dummyjson.com/products")
             const item = document.createElement("a");
             item.innerHTML = `${product.title}`;
             item.href = `detail.html?id=${product.id}`;
-            todo.appendChild(item);
+            todo.append(item);
         });
     })
     .catch((error) => {
         console.log(error);
     });
-
-const promise = new Promise((resolve, reject) => {});

@@ -1,13 +1,14 @@
-.todo {
+.product-list {
     display: flex;
     flex-direction: column;
 }
-.todo > * {
+.product-list > * {
     padding: 5px;
     text-decoration: none;
     color: black;
 }
 
-.todo > *:hover {
+.product-list > *:hover {
     background-color: antiquewhite;
 }
+

@@ -21,6 +21,8 @@ send("GET", `https://dummyjson.com/products/${id}`)
     .then((res) => {
         const h2 = document.createElement("h2");
         h2.innerText = `${res.title}`;
+        const img = document.createElement("img");
+        img.src = `${res.images[0]}`;
         const description = document.createElement("p");
         description.innerText = `${res.description}`;
         const category = document.createElement("p");
@@ -29,7 +31,7 @@ send("GET", `https://dummyjson.com/products/${id}`)
         price.innerText = `Giá: ${res.price}`;
         const rating = document.createElement("p");
         rating.innerText = `Đánh giá: ${res.rating}`;
-        products.append(h2, description, category, price, rating);
+        products.append(h2, description, img, category, price, rating);
     })
     .catch((error) => {
         console.log(error);
